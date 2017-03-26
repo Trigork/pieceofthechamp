@@ -1,6 +1,7 @@
 angular.module('myApp', [
 	'ngAnimate',
 	'app.routes',
-	'mainCtrl',
+	'skinsCtrl',
+	'statsCtrl',
 	'aboutCtrl'
 ]);

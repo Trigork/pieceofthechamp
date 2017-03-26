@@ -1,0 +1,10 @@
+<div class="container">
+	<div ng-repeat="champ in skins.champData | orderBy:'name'" ng-if="champ.ownership.owned">
+		<div class='skin-block' id={{champ.name}}>
+			<h3>{{champ.name}}</h3>
+			<div class="skin {{champ.name}}-skin" ng-repeat="skin in champ.skins" ng-if="skin.ownership.owned">
+				<span>{{skin.name}}</span>
+			</div>
+		</div>
+	</div>
+</div>

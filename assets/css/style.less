@@ -4,30 +4,31 @@
 @purple: #993399;
 @red: #cc3333;
 @light_gray: #DDDDDD;
+@transition_time: 0.75s;
 
 /* MAIN
 ====================== */
-body  { 
-	background:@light_gray; 
-	padding-top:50px;
+body  {
+	background:url('../img/dark_geometric.png');
 }
 
 #content-views {
-	position:relative; 
+	position:relative;
+	margin-top: 40px;
 }
 
-.ng-enter, .ng-leave { 
-	width:100%; position:absolute; 
+.ng-enter, .ng-leave {
+	width:100%; position:absolute;
 }
 
-.ng-enter { 
-	-webkit-animation:zoomInDown 1.2s both ease-in; 
-	-moz-animation:zoomInDown 1.2s both ease-in; 
-	animation:zoomInDown 1.2s both ease-in; 
+.ng-enter {
+	-webkit-animation:fadeIn @transition_time both ease-in;
+	-moz-animation:fadeIn @transition_time both ease-in;
+	animation:fadeIn @transition_time both ease-in;
 }
 
-.ng-leave { 
-	-webkit-animation:zoomOutDown 0.5s both ease-in; 
-	-moz-animation:zoomOutDown 0.5s both ease-in; 
-	nimation:zoomOutDown 0.5s both ease-in; 
+.ng-leave {
+	-webkit-animation:fadeOut @transition_time both ease-in;
+	-moz-animation:fadeOut @transition_time both ease-in;
+	nimation:fadeOut @transition_time both ease-in;
 }

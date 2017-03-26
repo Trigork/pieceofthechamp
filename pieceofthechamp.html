@@ -2,12 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Angular App</title>
-		<!-- FOR ANGULAR ROUTING -->
-		<base href="/">
+		<title>Piece of the Champ - LoL Skins Tracker</title>
 		<!-- CSS  -->
 		<!-- load bootstrap from CDN and custom CSS -->
-		<link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="stylesheet" href="assets/css/style.min.css">
@@ -17,9 +15,11 @@
 		<script src="assets/libs/angular/angular.js"></script>
 		<script src="assets/libs/angular-route/angular-route.min.js"></script>
 		<script src="assets/libs/angular-animate/angular-animate.min.js"></script>
+		<script src="assets/libs/bootstrap/dist/bootstrap.min.js"></script>
 
 		<!-- controllers -->
-		<script src="app/controllers/mainCtrl.js"></script>
+		<script src="app/controllers/skinsCtrl.js"></script>
+		<script src="app/controllers/statsCtrl.js"></script>
 		<script src="app/controllers/aboutCtrl.js"></script>
 
 		<!-- main Angular app files -->
@@ -28,21 +28,25 @@
 	</head>
 	<body class="container" ng-app="myApp">
 		<header>
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Angular Routing Example</a>
+					<a class="navbar-brand" href="#!/">Piece of the Champ</a>
 				</div>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-					<li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
-				</ul>
-			</nav>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#!/"><i class="fa fa-money"></i> Skins</a></li>
+						<li><a href="#!/stats"><i class="fa fa-pie-chart"></i> Stats</a></li>
+						<li><a href="#!/about"><i class="fa fa-info-circle"></i> About</a></li>
+					</ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
  		</header>
  		<main>
 			<div id="content-views">
 				<div ng-view></div>
-			</div> 
+			</div>
  		</main>
 	</body>
 </html>

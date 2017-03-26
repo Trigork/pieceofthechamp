@@ -14,12 +14,3 @@ gulp.task('css', function() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('assets/css'));
 });
-
-gulp.task('start', function () {
-  nodemon({
-    script: 'server.js'
-  , ext: 'js html less'
-  , tasks: ['css']
-  , env: { 'NODE_ENV': 'development' }
-  })
-});
